@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Question1">
+        <item>When did Operation Revival (Clan Invasion) start?</item>
+        <item>2017</item>
+        <item>3049</item>
+        <item>3048</item>
+        <item>3065</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="Question2">
+        <item>When did Operation Revival (Clan Invasion) start 2?</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>2</item>
+    </string-array>
+
+
+</resources>
