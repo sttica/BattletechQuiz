@@ -211,9 +211,12 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Sorry " + playerName + ".\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + ".", Toast.LENGTH_LONG).show();
         }
 
+        /* Reset Quiz to be able to start again*/
         startButton.setVisibility(View.VISIBLE);
         playerNameView.setText("");
         playerNameView.setVisibility(View.VISIBLE);
+        correctAnswers = 0;
+
     }
 
     public void setQuestion(int cursor){
