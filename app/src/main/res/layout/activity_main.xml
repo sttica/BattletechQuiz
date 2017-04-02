@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.battletechquiz.MainActivity">
+    tools:context="com.example.android.battletechquiz.MainActivity"
+    android:background="@color/background">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -24,19 +25,32 @@
         android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="20dp"
         android:scaleType="fitCenter"
         android:shadowColor="@android:color/black"
         android:src="@drawable/battletech" />
+
+    <EditText
+        android:id="@+id/playerName"
+        android:layout_below="@id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_player_name"
+        android:inputType="textPersonName"
+        android:imeOptions="actionDone"
+        />
 
     <Button
         android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/menu"
+        android:layout_below="@id/playerName"
         android:layout_centerHorizontal="true"
         android:onClick="startQuiz"
-        android:text="Start Quiz" />
+        android:text="@string/start_quiz"
+        android:textColor="@color/white"
+        android:background="@drawable/start_button"
+        />
 
     <LinearLayout
         android:id="@+id/questionSection"
@@ -44,8 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical"
-        android:visibility="invisible">
-        <!--android:visibility="visible"-->
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/question"
@@ -53,57 +66,58 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:padding="8dp"
-            android:text="Hier steht dann die Quizzfrage" />
+            android:layout_margin="8dp"
+            android:textColor="@color/white"
+            android:text="Question here"
+            android:background="@drawable/answer_button"
+            />
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:rowCount="2"
             android:columnCount="2"
-            android:padding="5dp">
+            android:layout_margin="8dp">
 
             <Button
-                android:id="@+id/answerA"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="150dp"
+                android:layout_width="170dp"
                 android:layout_height="50dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:onClick="giveAnswer"
+                android:id="@+id/answerA"
+                android:onClick="giveAnswerA"
                 android:text="Answer A"
-                android:theme="@style/millionaire.Button" />
+                android:textColor="@color/white"
+                android:background="@drawable/answer_button"
+                />
 
             <Button
                 android:id="@+id/answerB"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="150dp"
+                android:layout_width="170dp"
                 android:layout_height="50dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:onClick="giveAnswer"
+                android:onClick="giveAnswerB"
                 android:text="Answer B"
-                android:theme="@style/millionaire.Button" />
+                android:textColor="@color/white"
+                android:background="@drawable/answer_button"
+               />
 
             <Button
                 android:id="@+id/answerC"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="150dp"
+                android:layout_width="170dp"
                 android:layout_height="50dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:onClick="giveAnswer"
+                android:onClick="giveAnswerC"
                 android:text="Answer C"
-                android:theme="@style/millionaire.Button" />
+                android:textColor="@color/white"
+                android:background="@drawable/answer_button"
+                />
 
             <Button
                 android:id="@+id/answerD"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="150dp"
+                android:layout_width="170dp"
                 android:layout_height="50dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:onClick="giveAnswer"
+                android:onClick="giveAnswerD"
                 android:text="Answer D"
-                android:theme="@style/millionaire.Button" />
+                android:textColor="@color/white"
+                android:background="@drawable/answer_button"
+                />
 
         </GridLayout>
 

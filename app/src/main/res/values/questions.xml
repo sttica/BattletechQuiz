@@ -7,17 +7,34 @@
         <item>3049</item>
         <item>3048</item>
         <item>3065</item>
-        <item>2</item>
+        <item>answerB</item>
     </string-array>
 
     <string-array name="Question2">
-        <item>When did Operation Revival (Clan Invasion) start 2?</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>2</item>
+        <item>When did Operation Revival (Clan Invasion) start 2 Text text text text text?</item>
+        <item>Richtig</item>
+        <item>Falsch</item>
+        <item>Falsch</item>
+        <item>Falsch</item>
+        <item>answerA</item>
     </string-array>
 
+    <string-array name="Question3">
+        <item>When did Operation Revival (Clan Invasion) start 3?</item>
+        <item>Falsch</item>
+        <item>Falsch</item>
+        <item>Richtig</item>
+        <item>Falsch</item>
+        <item>answerC</item>
+    </string-array>
+
+    <string-array name="Question4">
+        <item>When did Operation Revival (Clan Invasion) start 4?</item>
+        <item>Falsch</item>
+        <item>Falsch</item>
+        <item>Falsch</item>
+        <item>Richtig</item>
+        <item>answerD</item>
+    </string-array>
 
 </resources>
