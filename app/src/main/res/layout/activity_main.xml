@@ -30,27 +30,79 @@
         android:shadowColor="@android:color/black"
         android:src="@drawable/battletech" />
 
-    <EditText
-        android:id="@+id/playerName"
-        android:layout_below="@id/menu"
+    <LinearLayout
+        android:id="@+id/playerData"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/enter_player_name"
-        android:inputType="textPersonName"
-        android:imeOptions="actionDone"
-        />
+        android:layout_below="@id/menu"
+        android:padding="5dp">
 
-    <Button
-        android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/playerName"
-        android:layout_centerHorizontal="true"
-        android:onClick="startQuiz"
-        android:text="@string/start_quiz"
-        android:textColor="@color/white"
-        android:background="@drawable/start_button"
-        />
+        <EditText
+            android:id="@+id/playerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_player_name"
+            android:inputType="textPersonName"
+            android:imeOptions="actionDone"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/pledgeAllegiance"/>
+
+        <RadioGroup
+            android:id="@+id/House"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Kurita"
+                android:onClick="setHouse"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Steiner"
+                android:onClick="setHouse"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Liao"
+                android:onClick="setHouse"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Davion"
+                android:onClick="setHouse"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Liao"
+                android:onClick="setHouse"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/start"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="startQuiz"
+            android:text="@string/start_quiz"
+            android:textColor="@color/white"
+            android:background="@drawable/start_button"
+            />
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/questionSection"
@@ -58,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical"
-        android:visibility="visible">
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/question"
@@ -80,7 +132,7 @@
             android:layout_margin="8dp">
 
             <Button
-                android:layout_width="170dp"
+                android:layout_width="172dp"
                 android:layout_height="50dp"
                 android:id="@+id/answerA"
                 android:onClick="giveAnswerA"
@@ -91,7 +143,7 @@
 
             <Button
                 android:id="@+id/answerB"
-                android:layout_width="170dp"
+                android:layout_width="172dp"
                 android:layout_height="50dp"
                 android:onClick="giveAnswerB"
                 android:text="Answer B"
@@ -101,7 +153,7 @@
 
             <Button
                 android:id="@+id/answerC"
-                android:layout_width="170dp"
+                android:layout_width="172dp"
                 android:layout_height="50dp"
                 android:onClick="giveAnswerC"
                 android:text="Answer C"
@@ -111,7 +163,7 @@
 
             <Button
                 android:id="@+id/answerD"
-                android:layout_width="170dp"
+                android:layout_width="172dp"
                 android:layout_height="50dp"
                 android:onClick="giveAnswerD"
                 android:text="Answer D"

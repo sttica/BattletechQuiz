@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,9 +30,12 @@ public class MainActivity extends AppCompatActivity {
     private String correctAnswer;
     private int questionCount = 4;
     private View questionSection;
+    private View playerData;
     private EditText playerNameView;
     private Button startButton;
     private String playerName;
+    private String house;
+    private RadioGroup houseView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         questionSection = findViewById(R.id.questionSection);
         playerNameView = (EditText)findViewById(R.id.playerName);
+        playerData = findViewById(R.id.playerData);
         startButton = (Button)findViewById(R.id.start);
+        houseView = (RadioGroup)findViewById(R.id.House);
     }
 
     @Override
@@ -50,10 +57,15 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    public void setHouse(View view){
+        /* get house name for final scores */
+        RadioButton self = (RadioButton) view;
+        house = self.getText().toString();
+    }
+
     public void startQuiz(View view){
-        /* hide start Button and EditText */
-        startButton.setVisibility(View.INVISIBLE);
-        playerNameView.setVisibility(View.INVISIBLE);
+        /* hide playerData */
+        playerData.setVisibility(View.INVISIBLE);
         /* get player name for final scores */
         playerName = playerNameView.getText().toString();
 
@@ -202,19 +214,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void showScore(){
         if (correctAnswers == questionCount){
-            Toast.makeText(getApplicationContext(), "Awesome " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + ".", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Awesome " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for house " + house + ".", Toast.LENGTH_LONG).show();
         }
         else if (correctAnswers > 0){
-            Toast.makeText(getApplicationContext(), "Congratulations " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + ".", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Congratulations " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for house " + house + ".", Toast.LENGTH_LONG).show();
         }
         else{
-            Toast.makeText(getApplicationContext(), "Sorry " + playerName + ".\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + ".", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Sorry " + playerName + ".\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for house " + house + ".", Toast.LENGTH_LONG).show();
         }
 
         /* Reset Quiz to be able to start again*/
-        startButton.setVisibility(View.VISIBLE);
+        playerData.setVisibility(View.VISIBLE);
         playerNameView.setText("");
-        playerNameView.setVisibility(View.VISIBLE);
         correctAnswers = 0;
 
     }
