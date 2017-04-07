@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.battletechquiz.MainActivity"
     android:background="@color/background">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
     <ImageView
         android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:scaleType="fitCenter"
         android:shadowColor="@android:color/black"
         android:src="@drawable/battletech" />
@@ -45,58 +29,77 @@
             android:hint="@string/enter_player_name"
             android:inputType="textPersonName"
             android:imeOptions="actionDone"
+            android:textSize="@dimen/textSize"
             />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@string/pledgeAllegiance"/>
+            android:text="@string/pledgeAllegiance"
+            android:textSize="@dimen/textSize"/>
 
         <RadioGroup
             android:id="@+id/House"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <RadioButton
+            <android.support.v7.widget.AppCompatRadioButton
+                android:buttonTint="@color/answerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Kurita"
+                android:textSize="@dimen/textSize"
+                android:textColor="@color/colorPrimaryDark"
                 android:onClick="setHouse"/>
 
-            <RadioButton
+            <android.support.v7.widget.AppCompatRadioButton
+                android:buttonTint="@color/answerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Steiner"
+                android:textSize="@dimen/textSize"
+                android:textColor="@color/colorPrimaryDark"
                 android:onClick="setHouse"/>
 
-            <RadioButton
+            <android.support.v7.widget.AppCompatRadioButton
+                android:buttonTint="@color/answerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Liao"
+                android:textSize="@dimen/textSize"
+                android:textColor="@color/colorPrimaryDark"
                 android:onClick="setHouse"/>
 
-            <RadioButton
+            <android.support.v7.widget.AppCompatRadioButton
+                android:buttonTint="@color/answerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Davion"
+                android:textSize="@dimen/textSize"
+                android:textColor="@color/colorPrimaryDark"
                 android:onClick="setHouse"/>
 
-            <RadioButton
+            <android.support.v7.widget.AppCompatRadioButton
+                android:buttonTint="@color/answerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Liao"
+                android:textSize="@dimen/textSize"
+                android:textColor="@color/colorPrimaryDark"
                 android:onClick="setHouse"/>
 
         </RadioGroup>
 
         <Button
+            android:textAllCaps="false"
             android:id="@+id/start"
             android:layout_marginTop="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="startQuiz"
             android:text="@string/start_quiz"
+            android:textSize="@dimen/textSize"
             android:textColor="@color/white"
             android:background="@drawable/start_button"
             />
@@ -132,6 +135,7 @@
             android:layout_margin="8dp">
 
             <Button
+                android:textAllCaps="false"
                 android:layout_width="172dp"
                 android:layout_height="50dp"
                 android:id="@+id/answerA"
@@ -142,6 +146,7 @@
                 />
 
             <Button
+                android:textAllCaps="false"
                 android:id="@+id/answerB"
                 android:layout_width="172dp"
                 android:layout_height="50dp"
@@ -152,6 +157,7 @@
                />
 
             <Button
+                android:textAllCaps="false"
                 android:id="@+id/answerC"
                 android:layout_width="172dp"
                 android:layout_height="50dp"
@@ -162,6 +168,7 @@
                 />
 
             <Button
+                android:textAllCaps="false"
                 android:id="@+id/answerD"
                 android:layout_width="172dp"
                 android:layout_height="50dp"

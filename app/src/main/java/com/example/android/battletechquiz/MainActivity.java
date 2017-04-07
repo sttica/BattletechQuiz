@@ -4,7 +4,6 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private int questionCursor;
     private int correctAnswers = 0;
     private String correctAnswer;
-    private int questionCount = 4;
+    private int questionCount = 10;
     private View questionSection;
     private View playerData;
     private EditText playerNameView;
@@ -41,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         questionSection = findViewById(R.id.questionSection);
         playerNameView = (EditText)findViewById(R.id.playerName);
         playerData = findViewById(R.id.playerData);
@@ -214,13 +211,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void showScore(){
         if (correctAnswers == questionCount){
-            Toast.makeText(getApplicationContext(), "Awesome " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for house " + house + ".", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Awesome " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for House " + house + ".", Toast.LENGTH_LONG).show();
         }
         else if (correctAnswers > 0){
-            Toast.makeText(getApplicationContext(), "Congratulations " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for house " + house + ".", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Congratulations " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for House " + house + ".", Toast.LENGTH_LONG).show();
         }
         else{
-            Toast.makeText(getApplicationContext(), "Sorry " + playerName + ".\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for house " + house + ".", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Sorry " + playerName + ".\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for House " + house + ".", Toast.LENGTH_LONG).show();
         }
 
         /* Reset Quiz to be able to start again*/

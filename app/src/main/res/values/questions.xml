@@ -5,36 +5,90 @@
         <item>When did Operation Revival (Clan Invasion) start?</item>
         <item>2017</item>
         <item>3049</item>
-        <item>3048</item>
+        <item>3025</item>
         <item>3065</item>
         <item>answerB</item>
     </string-array>
 
     <string-array name="Question2">
-        <item>When did Operation Revival (Clan Invasion) start 2 Text text text text text?</item>
-        <item>Richtig</item>
-        <item>Falsch</item>
-        <item>Falsch</item>
-        <item>Falsch</item>
-        <item>answerA</item>
+        <item>Whats the full name of "Stefan the Usurper"?</item>
+        <item>Stefan Amadeus</item>
+        <item>Stefan Amaranth</item>
+        <item>Stefan Amaris</item>
+        <item>Stefan Amaryllis</item>
+        <item>answerC</item>
     </string-array>
 
     <string-array name="Question3">
-        <item>When did Operation Revival (Clan Invasion) start 3?</item>
-        <item>Falsch</item>
-        <item>Falsch</item>
-        <item>Richtig</item>
-        <item>Falsch</item>
+        <item>What is the name of the first child of Archon Melissa Arthur Steiner?</item>
+        <item>Arthur</item>
+        <item>Peter</item>
+        <item>Victor</item>
+        <item>William</item>
         <item>answerC</item>
     </string-array>
 
     <string-array name="Question4">
-        <item>When did Operation Revival (Clan Invasion) start 4?</item>
-        <item>Falsch</item>
-        <item>Falsch</item>
-        <item>Falsch</item>
-        <item>Richtig</item>
+        <item>What is the name of the intelligence service of the Capellan Confederation?</item>
+        <item>Liaison Division</item>
+        <item>Yakuza</item>
+        <item>Maskirovka</item>
+        <item>Order of Five Pillars</item>
+        <item>answerC</item>
+    </string-array>
+
+    <string-array name="Question5">
+        <item>What is the tonnage of the iconic Atlas Battlemech?</item>
+        <item>50t</item>
+        <item>75t</item>
+        <item>95t</item>
+        <item>100t</item>
         <item>answerD</item>
+    </string-array>
+
+    <string-array name="Question6">
+        <item>What is the title of the ruler of the Draconis Combine?</item>
+        <item>Chancellor</item>
+        <item>Coordinator</item>
+        <item>Senator</item>
+        <item>Precentor</item>
+        <item>answerB</item>
+    </string-array>
+
+    <string-array name="Question7">
+        <item>What is the ritualistic challenge of combat issued by Clan warriors called?</item>
+        <item>Stravag</item>
+        <item>Isorla</item>
+        <item>Dezgra</item>
+        <item>Batchall</item>
+        <item>answerD</item>
+    </string-array>
+
+    <string-array name="Question8">
+        <item>Which planet is also called the Mercenary\'s Star?</item>
+        <item>Verthandi</item>
+        <item>Galatea</item>
+        <item>Phobos</item>
+        <item>Trellwan</item>
+        <item>answerB</item>
+    </string-array>
+
+    <string-array name="Question9">
+        <item>What is the Inner Sphere codename for the Clan Mech Timber Wolf?</item>
+        <item>Mad Bat</item>
+        <item>Mad Rat</item>
+        <item>Mad Cat</item>
+        <item>Mad Hat</item>
+        <item>answerC</item>
+    </string-array>
+
+    <string-array name="Question10">
+        <item>What was the military codename for the phase of the Star League offensive against Clan Smoke Jaguar in 3059?</item>
+        <item>Operation Bulldozer</item>
+        <item>Operation Bulldog</item>
+        <item>Operation Pug</item>
+        <item>Operation Bird Dog</item>
+        <item>answerB</item>
     </string-array>
 
 </resources>
