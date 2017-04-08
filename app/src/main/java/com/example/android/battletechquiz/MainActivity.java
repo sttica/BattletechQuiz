@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     public void startQuiz(View view){
         /* hide playerData */
         playerData.setVisibility(View.INVISIBLE);
+        startButton.setVisibility(View.INVISIBLE);
         /* get player name for final scores */
         playerName = playerNameView.getText().toString();
 
@@ -222,6 +223,7 @@ public class MainActivity extends AppCompatActivity {
 
         /* Reset Quiz to be able to start again*/
         playerData.setVisibility(View.VISIBLE);
+        startButton.setVisibility(View.VISIBLE);
         playerNameView.setText("");
         correctAnswers = 0;
 

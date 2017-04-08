@@ -3,13 +3,12 @@
     <color name="colorPrimary">#607D8B</color>
     <color name="colorPrimaryDark">#455A64</color>
     <color name="colorAccent">#455A64</color>
-    <!--<color name="colorAccent">#536DFE</color>-->
 
     <color name="background">#CFD8DC</color>
 
     <color name="white">#fcfafd</color>
     <color name="answerButton">#333134</color>
-    <color name="answeredButton">#ff9d02</color>
+    <color name="answeredButton">#607D8B</color>
     <color name="answeredButtonStroke">#607D8B</color>
     <color name="answerCorrect">#28e936</color>
 

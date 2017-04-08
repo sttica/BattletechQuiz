@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.battletechquiz.MainActivity"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:scaleType="fitCenter"
+            android:shadowColor="@android:color/black"
+            android:src="@drawable/battletech" />
+
+        <LinearLayout
+            android:id="@+id/playerData"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/menu"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/playerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_player_name"
+                android:inputType="textPersonName"
+                android:imeOptions="actionDone"
+                android:textSize="@dimen/textSize"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="4dp"
+                android:text="@string/pledgeAllegiance"
+                android:textSize="@dimen/textSize"/>
+
+            <RadioGroup
+                android:id="@+id/House"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:buttonTint="@color/answerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Kurita"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="setHouse"/>
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:buttonTint="@color/answerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Steiner"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="setHouse"/>
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:buttonTint="@color/answerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Liao"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="setHouse"/>
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:buttonTint="@color/answerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Davion"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="setHouse"/>
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:buttonTint="@color/answerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Liao"
+                    android:textSize="@dimen/textSize"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="setHouse"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/start"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="startQuiz"
+            android:text="@string/start_quiz"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/white"
+            android:background="@drawable/start_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/questionSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textColor="@color/white"
+            android:text="Question here"
+            android:background="@drawable/answer_button"
+            />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="2"
+            android:layout_margin="8dp">
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:id="@+id/answerA"
+                android:onClick="giveAnswerA"
+                android:text="Answer A"
+                android:textColor="@color/white"
+                android:background="@drawable/answer_button"
+                />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/answerB"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:onClick="giveAnswerB"
+                android:text="Answer B"
+                android:textColor="@color/white"
+                android:background="@drawable/answer_button"
+               />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/answerC"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:onClick="giveAnswerC"
+                android:text="Answer C"
+                android:textColor="@color/white"
+                android:background="@drawable/answer_button"
+                />
+
+            <Button
+                android:textAllCaps="false"
+                android:id="@+id/answerD"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:onClick="giveAnswerD"
+                android:text="Answer D"
+                android:textColor="@color/white"
+                android:background="@drawable/answer_button"
+                />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
