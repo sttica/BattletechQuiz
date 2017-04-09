@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private int questionCursor;
     private int correctAnswers = 0;
     private String correctAnswer;
-    private int questionCount = 1;
+    private int questionCount = 10;
     private View questionSection;
     private View playerData;
     private View finalQuestion;
