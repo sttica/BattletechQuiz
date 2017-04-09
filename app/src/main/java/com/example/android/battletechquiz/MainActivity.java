@@ -27,9 +27,10 @@ public class MainActivity extends AppCompatActivity {
     private int questionCursor;
     private int correctAnswers = 0;
     private String correctAnswer;
-    private int questionCount = 10;
+    private int questionCount = 1;
     private View questionSection;
     private View playerData;
+    private View finalQuestion;
     private EditText playerNameView;
     private Button startButton;
     private String playerName;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         playerNameView = (EditText)findViewById(R.id.playerName);
         playerData = findViewById(R.id.playerData);
         startButton = (Button)findViewById(R.id.start);
+        finalQuestion = findViewById(R.id.finalQuestion);
         houseView = (RadioGroup)findViewById(R.id.House);
     }
 
@@ -136,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             Log.v("correctAnswers final", String.valueOf(correctAnswers));
             questionSection.setVisibility(View.INVISIBLE);
-            showScore();
+            finalQuestion.setVisibility(View.VISIBLE);
         }
 
     }
@@ -159,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             Log.v("correctAnswers final", String.valueOf(correctAnswers));
             questionSection.setVisibility(View.INVISIBLE);
-            showScore();
+            finalQuestion.setVisibility(View.VISIBLE);
         }
 
     }
@@ -182,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             Log.v("correctAnswers final", String.valueOf(correctAnswers));
             questionSection.setVisibility(View.INVISIBLE);
-            showScore();
+            finalQuestion.setVisibility(View.VISIBLE);
         }
 
     }
@@ -205,12 +207,13 @@ public class MainActivity extends AppCompatActivity {
         else {
             Log.v("correctAnswers final", String.valueOf(correctAnswers));
             questionSection.setVisibility(View.INVISIBLE);
-            showScore();
+            finalQuestion.setVisibility(View.VISIBLE);
         }
 
     }
 
-    public void showScore(){
+    public void showScore(View view){
+
         if (correctAnswers == questionCount){
             Toast.makeText(getApplicationContext(), "Awesome " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for House " + house + ".", Toast.LENGTH_LONG).show();
         }
@@ -222,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         /* Reset Quiz to be able to start again*/
+        finalQuestion.setVisibility(View.INVISIBLE);
         playerData.setVisibility(View.VISIBLE);
         startButton.setVisibility(View.VISIBLE);
         playerNameView.setText("");

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.android.battletechquiz.MainActivity"
     android:background="@color/background">
 
@@ -52,7 +53,7 @@
             android:layout_below="@id/houseTitle">
 
             <android.support.v7.widget.AppCompatRadioButton
-                android:buttonTint="@color/answerButton"
+                app:buttonTint="@color/answerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Kurita"
@@ -61,7 +62,7 @@
                 android:onClick="setHouse"/>
 
             <android.support.v7.widget.AppCompatRadioButton
-                android:buttonTint="@color/answerButton"
+                app:buttonTint="@color/answerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Steiner"
@@ -70,7 +71,7 @@
                 android:onClick="setHouse"/>
 
             <android.support.v7.widget.AppCompatRadioButton
-                android:buttonTint="@color/answerButton"
+                app:buttonTint="@color/answerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Marik"
@@ -79,7 +80,7 @@
                 android:onClick="setHouse"/>
 
             <android.support.v7.widget.AppCompatRadioButton
-                android:buttonTint="@color/answerButton"
+                app:buttonTint="@color/answerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Davion"
@@ -88,7 +89,7 @@
                 android:onClick="setHouse"/>
 
             <android.support.v7.widget.AppCompatRadioButton
-                android:buttonTint="@color/answerButton"
+                app:buttonTint="@color/answerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Liao"
@@ -114,6 +115,64 @@
 
     </RelativeLayout>
 
+
+    <LinearLayout
+        android:id="@+id/finalQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lastQuestion"/>
+
+        <CheckBox
+            app:buttonTint="@color/answerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/era1"/>
+
+        <CheckBox
+            app:buttonTint="@color/answerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/era2"/>
+
+        <CheckBox
+            app:buttonTint="@color/answerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/era3"/>
+
+        <CheckBox
+            app:buttonTint="@color/answerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/era4"/>
+
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/showScores"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showScore"
+            android:text="@string/finish"
+            android:textSize="@dimen/textSize"
+            android:textColor="@color/white"
+            android:background="@drawable/start_button"
+            android:layout_below="@id/House"
+            />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/questionSection"
