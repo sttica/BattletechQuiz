@@ -7,6 +7,7 @@
     <color name="background">#CFD8DC</color>
 
     <color name="white">#fcfafd</color>
+    <color name="black">#000000</color>
     <color name="answerButton">#333134</color>
     <color name="answeredButton">#607D8B</color>
     <color name="answeredButtonStroke">#607D8B</color>
