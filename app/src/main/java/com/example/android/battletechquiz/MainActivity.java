@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -214,20 +215,50 @@ public class MainActivity extends AppCompatActivity {
 
     public void showScore(View view){
 
+        String era = "";
+
+        CheckBox era1 = (CheckBox) findViewById(R.id.era1);
+        CheckBox era2 = (CheckBox) findViewById(R.id.era2);
+        CheckBox era3 = (CheckBox) findViewById(R.id.era3);
+        CheckBox era4 = (CheckBox) findViewById(R.id.era4);
+
+        if (era1.isChecked()){
+            era = era + "\n" + getString(R.string.era1);
+        }
+        if (era2.isChecked()){
+            era = era + "\n" + getString(R.string.era2);
+        }
+        if (era3.isChecked()){
+            era = era + "\n" + getString(R.string.era3);
+        }
+        if (era4.isChecked()){
+            era = era + "\n" + getString(R.string.era4);
+        }
+
+
+        findViewById(R.id.answerA);
+
         if (correctAnswers == questionCount){
-            Toast.makeText(getApplicationContext(), "Awesome " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for House " + house + ".", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Awesome " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for House " + house + "." + "\n\n" + "You like these Battletech eras best:" + era
+                    , Toast.LENGTH_LONG).show();
         }
         else if (correctAnswers > 0){
-            Toast.makeText(getApplicationContext(), "Congratulations " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for House " + house + ".", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Congratulations " + playerName + "!\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for House " + house + "." + "\n\n" + "You like these Battletech eras best:" + era
+                    , Toast.LENGTH_LONG).show();
         }
         else{
-            Toast.makeText(getApplicationContext(), "Sorry " + playerName + ".\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for House " + house + ".", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Sorry " + playerName + ".\n" + "You scored " + String.valueOf(correctAnswers) + " correct Answers out of " + questionCount + " for House " + house + "." + "\n\n" + "You like these Battletech eras best:" + era
+                    , Toast.LENGTH_LONG).show();
         }
 
         /* Reset Quiz to be able to start again*/
         finalQuestion.setVisibility(View.INVISIBLE);
         playerData.setVisibility(View.VISIBLE);
         startButton.setVisibility(View.VISIBLE);
+        era1.setChecked(false);
+        era2.setChecked(false);
+        era3.setChecked(false);
+        era4.setChecked(false);
         playerNameView.setText("");
         correctAnswers = 0;
 
